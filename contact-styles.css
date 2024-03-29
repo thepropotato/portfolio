@@ -172,3 +172,27 @@ footer {
     padding-top: 0px;
     padding-bottom: 0px;
 }
+
+@media (orientation: portrait) {
+
+    .main{
+        flex-direction: column-reverse;
+    }
+
+    .left{
+        width: 100%;
+    }
+
+    .right{
+        width: 100%;
+    }
+
+    button, input, textarea{
+        margin-left: 0%;
+        margin: 2%;
+    }
+
+    #msg{
+        padding-left: 2%;
+    }
+}
