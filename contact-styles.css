@@ -188,13 +188,13 @@ footer {
     }
 
     i{
-        font-size: 40px;
+        font-size: 20px;
     }
 
     button, input, textarea{
         margin-left: 0%;
         margin: 2%;
-        border-radius: 10px;
+        border-radius: 5px;
     }
 
     #msg{
