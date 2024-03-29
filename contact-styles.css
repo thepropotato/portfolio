@@ -187,10 +187,6 @@ footer {
         width: 100%;
     }
 
-    i{
-        font-size: 20px;
-    }
-
     button, input, textarea{
         margin-left: 0%;
         margin: 2%;
