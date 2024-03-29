@@ -1,0 +1,174 @@
+@font-face {
+    font-family: valorant;
+    src: url("fonts/Valorant\ Font.ttf") format("opentype");
+}
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+i, a{
+    color: black;
+    margin: 2%;
+    transition: all 0.3s ease;
+}
+
+a:hover i{
+    opacity: 0.6;
+}
+
+.container{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: calc(10vh - 25px);
+    margin-bottom: calc(10vh - 25px);
+    overflow: auto;
+    backdrop-filter: blur(120px);
+    border-radius: 20px;
+    border: 1px solid black;
+    display: flex;
+    height: 80vh;
+    width: 80vw;
+    flex-direction: column;
+}
+
+.note{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    font-size: 4vw;
+    font-family: "dela gothic one";
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.main{
+    height: 80%;
+    display: flex;
+    width: 100%;
+}
+
+.left{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.social{
+    color: black;
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    font-size: 2vw;
+}
+
+.emoji{
+    display: flex;
+    font-size: 15vw;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    border-radius: 100%;
+    animation: wave 1s linear infinite;
+    transform-origin: 80% 100%;
+}
+
+.form-cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes wave {
+    0%, 100%{
+        rotate: 10deg;
+    }
+
+    50%{
+        rotate: -5deg;
+    }
+}
+
+input, textarea{
+    margin: 1%;
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 2% 2%;
+    margin-left: 22%;
+    font-family: "outfit";
+    font-size: large;
+}
+
+button{
+    min-width: fit-content;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    padding: 2% 2%;
+    margin-left: 22%;
+    font-family: "outfit";
+    font-size: large;
+    width: 40%;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+textarea{
+    width: 50;
+    overflow: auto;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    height: 50px;
+    margin: 0;
+    color: white;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "bungee hairline";
+    font-size: 1vw;
+}
+
+
+#call{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#msg{
+    padding-left: 22%;
+    display: flex;
+    font-family: "outfit";
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}

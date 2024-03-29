@@ -1,0 +1,179 @@
+@font-face {
+    font-family: valorant;
+    src: url("fonts/Valorant\ Font.ttf") format("opentype");
+}
+
+.container{
+    height: 80vh;
+    width: 80vw;
+    margin: 10vh 10vw;
+    display: flex;
+}
+
+.circles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60vh;
+    width: 40%;
+    height: 100%;
+}
+
+.circle1{
+    background-image: linear-gradient(to right, black , rgb(40, 40, 40));
+    height: 60vh;
+    width: 60vh;
+    border-radius: 50%;
+    animation: rotateCircle 3s linear infinite; /* Apply animation */
+}
+
+@keyframes rotateCircle {
+    from {
+        transform: rotate(0deg); /* Rotate from 0 degrees */
+    }
+    to {
+        transform: rotate(360deg); /* Rotate to 360 degrees */
+    }
+}
+
+.circle1 p {
+    font-family: "valorant";
+    color: gray;
+    font-size: 3vh;
+    padding-left : 30vh;
+    margin-top: 18vh;
+    transform: rotate(270deg); /* Apply rotation */
+}
+
+.circle2{
+    position: absolute;
+    background-color: transparent;
+    height: 12vh;
+    border: 0.5vh solid gray;
+    width: 12vh;
+    border-radius: 50%;
+}
+
+.circle3{
+    position: absolute;
+    background-color: white;
+    height: 2vh;
+    width: 2vh;
+    border-radius: 50%;
+}
+
+
+.tab-container{
+    margin-left: 5%;
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs{
+    display: flex;
+    height: 10%;
+    align-items: end;
+}
+
+.tabs button{
+    font-family: "outfit";
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 2%;
+    height: 80%;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;;
+    
+}
+
+.tabs button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.tabs button:focus {
+    color: black;
+    height: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.tabs button:focus:hover {
+    opacity: 1;
+}
+
+.display{
+    border: 1px solid black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-family: "outfit";
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    overflow-y: auto;
+    width: calc(95%-40px);
+    height: 100%;
+    backdrop-filter: blur(800px);
+}
+
+.display img {
+    max-width: 100%;
+    height: auto;
+}
+
+#switchifyButton{
+    border-top-left-radius: 20px;
+}
+
+#viewMoreButton{
+    border-top-right-radius: 20px;
+}
+
+
+@media (max-width: 100vh) {
+    .circle1 p {
+        font-size: 2vh; /* If viewport height is smaller than viewport width, use 2vh */
+    }
+}
+
+@media (orientation: portrait) {
+    /* Styles to apply when viewport height is greater than width */
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .circles{
+        display: none;
+    }
+
+    .tab-container{
+        width: 100%;
+        margin-left: 0%;
+    }
+  }
+
+
+.display::-webkit-scrollbar{
+    border-radius: 10px;
+    width: 10px;
+    background-color: rgba(0, 0, 0, 0); /* Background color of the scrollbar track */
+}
+
+.display::-webkit-scrollbar-thumb {
+    cursor: pointer !important;
+    background-color: rgba(0, 0, 0, 0.144); /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+    border: 3px solid transparent; /* Border around the scrollbar thumb */
+}
+
+.display::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Color of the scrollbar thumb on hover */
+}

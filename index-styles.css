@@ -1,0 +1,413 @@
+@font-face {
+    font-family: dimis;
+    src: url("fonts/DIMIS___.TTF") format("opentype");
+}
+
+@font-face {
+    font-family: dimitri;
+    src: url("fonts/DIMITRI_.TTF") format("opentype");
+}
+
+@font-face {
+    font-family: inversionz;
+    src: url("fonts/Inversionz\ Unboxed.otf") format("opentype");
+}
+
+@font-face {
+    font-family: valorant;
+    src: url("fonts/Valorant\ Font.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: york-game;
+    src: url("fonts/YorkGame-Regular.otf") format("opentype");
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+    background-color: black; /* Background color of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+    cursor: pointer !important;
+    background-color: rgba(255, 255, 255, 0.2); /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+    border: 3px solid transparent; /* Border around the scrollbar thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Color of the scrollbar thumb on hover */
+}
+
+header{
+    background-color: black;
+    font-family: "bungee hairline";
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    display: flex;
+    padding-left: 10px;
+    justify-content: space-between;
+}
+
+.logo{
+    display: inline;
+    font-weight: bold;
+    color: rgb(145, 145, 145);
+    text-shadow: 0 0 10px rgb(145, 145, 145);
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/bg.jpg);
+    background-size: cover; /* Cover the entire viewport */
+    background-position: top; /* Position the image at the top */
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.pages {
+    height: 600vh;
+}
+/* Code for Page-1 */
+
+.page1{
+    margin: none;
+    padding: none;
+    height: 100vh;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+}
+
+header{
+    padding-left: 1%;
+    padding-right: 1%;
+    font-family: "bungee hairline";
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar{
+    background-color: transparent;
+    border: 1px solid black;
+    color: white;
+    font-weight: bold   ;
+    font-family: "bungee hairline";
+}
+
+.logo{
+    color: rgb(145, 145, 145);
+    font-size: large;
+    text-shadow: 0 0 5px rgb(145, 145, 145);
+}
+
+.navbar:hover{
+    cursor: pointer;
+    background-color: rgba(85, 85, 85, 0.3);
+    color: rgb(145, 145, 145);
+    border: 1px solid black;
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+}
+
+.menu{
+    display: none;
+}
+
+.side-menu{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(120px);
+    margin: 0px;
+    z-index: 1;
+    animation: openmenubar 0.15s ease;
+    justify-content: center;
+}
+
+
+@keyframes openmenubar{
+    0% {
+        left: 100%; /* Start position */
+    }
+    100% {
+        left: 0%; /* End position */
+    }
+}
+
+.menubar{
+    padding: 5%;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    font-family: "valorant";
+    margin: 1% 2%;
+    border-radius: 10px;
+}
+
+#hideside{
+    color: rgb(145, 145, 145)
+}
+
+
+.song-tile{
+    width: 70vw;
+    height: 70vh;
+    margin: 15vh 15vw;
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    filter: grayscale();
+    border-radius: 20px;
+}
+
+.album{
+    display: flex;
+    height: 70%;
+}
+
+.image-container{
+    width: 40%;
+    display: flex;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.image-container img{
+    height: 100%;
+}
+
+.details{
+    padding-left: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-end;
+    height: 100%;
+    width: 60%;
+}
+
+.track{
+    font-family: "valorant";
+    font-size: xx-large;
+    width: 100%;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.artist{
+    font-family: "inversionz";
+    padding-top: 0px;
+    margin-top: 1%;
+    font-size: x-large;
+}
+
+.track-nav{
+    margin: 2%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.circle{
+    border-radius: 1px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 100px;
+    background-color: black;
+    transition: all 0.1s ease;
+}
+
+.circle:hover{
+    cursor: pointer;
+    background-color: white;
+}
+
+.circle:focus {
+    background-color: white;
+    color: black;
+}
+
+#popup{
+    backdrop-filter: blur(120px);
+    text-align: center;
+    font-family: "outfit";
+    display: none;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button{
+    margin: 2%;
+}
+
+#pages{
+    border-width: 0px;
+    background-color: transparent;
+    color: rgb(130, 130, 130);
+    border-radius: 10px;
+    font-family: "valorant";
+    font-size: xx-large;
+}
+
+#pages:hover{
+    cursor: pointer;
+}
+
+.skip, .play{
+    border: 1px solid black;
+    margin: 10px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    font-size: xx-large;
+    transition: all 0.1s ease;
+}
+
+.skip:hover, .play:hover{
+    cursor: pointer;
+}
+
+.skip:active, .play:active{
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+}
+
+.faded {
+    opacity: 0.6;
+    color: white;
+    pointer-events: none;
+}
+
+
+/* Code for Page-2 */
+
+.page2{
+    height: 100vh;
+}
+
+/* Code for Page-3 */
+
+.page3{
+    height: 100vh;
+}
+
+/* Code for Page-4 */
+
+.page4{
+    height: 100vh;
+}
+
+/* Code for Page-5 */
+
+.page5{
+    height: 100vh;
+}
+
+/* Code for Page-6 */
+
+.page6{
+    height: 100vh;
+}
+
+#show-page{
+    display:flex;
+    justify-content: center;
+    border-radius: 100%;
+    align-items:center;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    font-size: 20px; 
+    font-family: 'dela gothic one'; 
+    color: rgb(145, 145, 145); 
+    background-color: black; 
+    border: none;
+    transition: all 0.15s ease;
+}
+
+.alternative{
+    margin: 5px;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    font-family: "dela gothic one";
+    font-size: 24px;
+    justify-content: center;
+}
+
+#show-page:hover{
+    cursor: pointer;
+    background-color: rgb(145, 145, 145);
+    color: black;
+}
+
+
+@media (orientation: portrait) {
+
+    .pages{
+        display: none;
+    }
+
+    .alternative{
+        display: flex;
+    }
+
+    .album{
+        flex-direction: column;
+    }
+
+    .image-container{
+        width: 100%;
+        height: 100%;
+    }
+
+    .details{
+        height: fit-content;
+        justify-content: start;
+        width: 100%;
+    }
+
+    .track, #pages{
+        font-size: large;
+    }
+
+    .menu{
+        background-color: black;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: x-large;
+    }
+
+    .navbar-buttons{
+        display: none;
+    }
+
+}

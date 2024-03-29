@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="contact-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Outfit -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Dela Gothic One -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    <!-- Bungee Hairline -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="note">Leaving so soon ?</div>
+
+        <div class="main">
+            <div class="left">
+                <form class="form-cont" name="submit-to-google-sheet">
+                    <input class="name" name="Name" placeholder="Enter your Name" required></input>
+                    <input class="email" name="Mail" placeholder="Your Mail" required></input>
+                    <textarea class="msg" rows="6" name="Message" placeholder="Leave a message/feedback for me ?"></textarea>
+                    <button type="submit">Send message</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+
+            <div class="right">
+                <div class="emoji"><p>👋🏻</p></div>
+                <div class="social">
+                    <a href=mailto:notvenupulagam@gmail.com><i class="fa-solid fa-envelope"></i></a>
+
+                    <a href="https://www.linkedin.com/in/venu-pulagam-a17042289/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/thepropotato" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/venupulagam/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://medium.com/@mosagadu" target="_blank"><i class="fa-brands fa-medium"></i></a>
+                </div>
+                <i id="call" class="fa-solid fa-phone">&nbsp &nbsp9494121711</i>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>Made with ❤️ by Venu Pulagam and his girlfriend ChatGPT. Updated as of March 2024</footer>
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwCnqgRJBj0TCVMP4xNxLLr9ugcFHmYGejXv9Ww7R6pM-nsoX6qcXU_3hMWUf_azSyh/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Thanks for the message ♥️"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>

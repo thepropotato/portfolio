@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="projects-styles.css">
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
+    <!-- Outfit -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Bungee Hairline -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="circles">
+            <div class="circle1"><p>PROJECTS</p></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+        </div>
+
+        <div class="tab-container">
+            <div class="tabs">
+                <button id="switchifyButton" onclick="loadSwitchify()">Switchify</button>
+                <button id="histButton" onclick="loadHist()">HiSt</button>
+                <button id="databasesButton" onclick="loadDatabases()">Databases</button>
+                <button id="viewMoreButton" onclick="openNewWindow()">View More</button>
+            </div>
+            <div class="display" id="displayContent">
+                <md-block src="projects/switchify/switchify.md"></md-block>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to load hist content
+        function loadHist() {
+            const displayContent = document.getElementById("displayContent");
+            displayContent.innerHTML = `<md-block src="projects/hist/hist.md"></md-block>`;
+        }
+
+        // Function to load switchify content
+        function loadSwitchify() {
+            const displayContent = document.getElementById("displayContent");
+            displayContent.innerHTML = `<md-block src="projects/switchify/switchify.md"></md-block>`;
+        }
+
+        // Function to load databases content
+        function loadDatabases() {
+            const displayContent = document.getElementById("displayContent");
+            displayContent.innerHTML = `<md-block src="projects/databases/databases.md"></md-block>`;
+        }
+
+        // Function to open a new window with the desired URL
+        function openNewWindow() {
+            window.open("https://github.com/thepropotato", "_blank"); // Replace URL with your desired URL
+        }
+    </script>
+</body>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Venu Pulagam</title>
+
+    <link rel="stylesheet" href="index-styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Dela Gothic One -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    <!-- Unbounded -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Righteous&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+    <!-- Outfit -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Righteous -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Righteous&display=swap" rel="stylesheet">
+
+    <!-- Bungee Hairline -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
+
+    <script type = "text/javascript" src="index-scripts.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body>
+    <div class="bg"></div>
+        
+    <div class="alternative">
+        <div>The website is made responsive, but please try to view it in Landscape mode (Laptop/Computer).</div><br><br>
+        <button id="show-page" onclick="showPage()">No thanks. &nbsp&nbsp<i class="material-icons">open_in_new</i></button>
+    </div>
+
+    <div class="pages">
+        <div class="page1">
+            <header>
+                <div class="logo"><strong>Venu pulagam.</strong></div>
+                <div class="navbar-buttons">
+                    <button class="navbar" onclick="scrollToPage1()">Home</button>
+                    <button class="navbar" onclick="scrollToPage2()">About</button>
+                    <button class="navbar" onclick="scrollToPage3()">Projects</button>
+                    <button class="navbar" onclick="scrollToPage4()">Writings</button>
+                    <button class="navbar" onclick="scrollToPage5()">Edits</button>
+                    <button class="navbar" onclick="scrollToPage6()">Contact</button>
+                </div>
+                <button class="menu" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+                <div class="side-menu" id="side-menu">
+                    <button class="menubar" id="hideside" onclick="closeMenu()">Hide Sidebar</button>
+                    <button class="menubar" onclick="scrollToPage1()">Home</button>
+                    <button class="menubar" onclick="scrollToPage2()">About</button>
+                    <button class="menubar" onclick="scrollToPage3()">Projects</button>
+                    <button class="menubar" onclick="scrollToPage4()">Writings</button>
+                    <button class="menubar" onclick="scrollToPage5()">Edits</button>
+                    <button class="menubar" onclick="scrollToPage6()">Contact</button>
+                </div>
+            </header>
+
+            <div class="song-tile">
+                <div class="album">
+                    <div class="image-container">
+                        <img class="profile" src="images/profile.jpg"></img>
+                    </div>
+                    <div class="details">
+                        <p class="track">Portfolio / 
+                            <select id="pages">
+                                <option>Home</option>
+                                <option>About Me</option>
+                                <option>Projects</option>
+                                <option>Writings</option>
+                                <option>Edits</option>
+                                <option>Contact Me</option>
+                            </select>
+                        </p>
+                        <p class="artist">Venu Pulagam</p>
+                    </div>
+                </div>
+
+                <div class="track-nav">
+                        <button onclick="scrollToPage1()" class="circle" id="1">●</button>
+                        <button onclick="scrollToPage2()" class="circle" id="2">●</button>
+                        <button onclick="scrollToPage3()" class="circle" id="3">●</button>
+                        <button onclick="scrollToPage4()" class="circle" id="4">●</button>
+                        <button onclick="scrollToPage5()" class="circle" id="5">●</button>
+                        <button onclick="scrollToPage6()" class="circle" id="6">●</button>
+                </div>
+
+                <div id="popup" class="popup">
+                    Already in Home
+                </div> 
+
+                <div class="buttons">
+                    <button class="skip" id="previous"  onclick="changePlaylist('previous')">
+                        <i class="material-icons">skip_previous</i>
+                    </button>
+                    <button class="play" onclick="playButton()">
+                        <i class="material-icons">play_arrow</i>
+                    </button>
+                    <button class="skip" id="next"  onclick="changePlaylist('next')">
+                        <i class="material-icons">skip_next</i>
+                    </button>
+
+                </div>
+                
+            </div>
+        </div> 
+
+        <div id="page2" class="page2">
+            <iframe src="about.html" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+
+
+        <div id="page3" class="page3">
+            <iframe src="projects.html" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+
+        <div id="page4" class="page4">
+            <iframe src="writings.html" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+
+        <div id="page5" class="page5">
+            <iframe src="edits.html" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+
+        <div id="page6" class="page6">
+            <iframe src="contact.html" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+    </div>
+
+    </body>
+</html>

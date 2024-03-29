@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="writings-styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100..800&display=swap" rel="stylesheet">
+    
+    <!-- Outfit -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <div class="desc">
+                <p>Besides my studies, I dedicate a significant portion of my time to my hobbies, one of which is writing. Whenever I have some free time, I enjoy crafting stories. This slideshow presents snippets from some of my stories. You can read more of my writings on Medium by visiting my profile under the username <strong>mosagadu</strong>. I welcome any feedback you may have to help me improve!</p>
+                <p>Allow me to explain why I've chosen the moniker "mosagadu" for myself. In Telugu, "mosagadu" translates to "cheater". From my perspective, cinema embodies a form of deception—it fabricates reality. As a cinema enthusiast and aspiring filmmaker, I've adopted this name to symbolize my fascination with the art of storytelling and filmmaking.</p>
+            </div>
+            <a href="https://medium.com/@mosagadu" target="_blank">Mosagadu on Medium</a>
+        </div>
+
+        <div class="show">
+            <div class="quotes">
+                <p class="p">రాముడ్ని ఎవరు “రామ దేవుడు” అని పిలవనప్పుడు, సీత మాత్రం దేవత అవ్వడానికి “సీత దేవి” అని పేరు మార్చుకోవాల్సిన అవసరం ఏముంది ?</p>
+                <p class="p">ఇకపై “ప్రేమంటే ఏంట్రా ?” అని నిన్ను ఎవరైనా అడిగితే, ఎప్పట్లాగే తెలీదు అని కాకుండా, “క్షమించగలగటం” అని నవ్వుతూ చెప్పు</p>
+                <p id="sp" class="p">Love is not a feeling, Love is a belief.</p>
+                <p class="p">మేము విడిపోయింది నిజమే. కానీ మా ప్రేమ అబద్ధం కాదు.</p>
+            </div>
+            <div class="navigation">
+                <button onclick="prevSentence()">
+                    <i class="material-icons">navigate_before</i>
+                </button>
+                <button onclick="nextSentence()">
+                    <i class="material-icons">navigate_next</i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var sentences = document.querySelectorAll('.quotes .p');
+        var currentIndex = 0;
+        var intervalId; // Variable to store the interval ID
+    
+        function showSentence(index) {
+            for (var i = 0; i < sentences.length; i++) {
+                sentences[i].style.opacity = '0';
+                sentences[i].style.display = 'none';
+            }
+            sentences[index].style.opacity = '1';
+            sentences[index].style.display = 'flex'; // Corrected line
+        }
+    
+        function nextSentence() {
+            currentIndex = (currentIndex + 1) % sentences.length;
+            showSentence(currentIndex);
+        }
+    
+        function prevSentence() {
+            currentIndex = (currentIndex - 1 + sentences.length) % sentences.length;
+            showSentence(currentIndex);
+        }
+    
+        function startAutoSwitch() {
+            intervalId = setInterval(nextSentence, 2000);
+        }
+    
+        function stopAutoSwitch() {
+            clearInterval(intervalId);
+        }
+    
+        // Auto-switch sentences initially
+        startAutoSwitch();
+    
+        // Show the initial sentence
+        showSentence(currentIndex);
+    
+        // Attach event listeners to the navigation buttons
+        document.querySelector('.navigation button:nth-child(1)').addEventListener('click', function() {
+            stopAutoSwitch(); // Stop automatic switching when a button is clicked
+            prevSentence();
+        });
+    
+        document.querySelector('.navigation button:nth-child(2)').addEventListener('click', function() {
+            stopAutoSwitch(); // Stop automatic switching when a button is clicked
+            nextSentence();
+        });
+    </script>
+    
+</body>

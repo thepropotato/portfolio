@@ -1,0 +1,120 @@
+
+body{
+  margin: 0px;
+  padding: 0px;
+  font-family: "outfit", Arial, Helvetica, sans-serif;
+}
+
+  .container{
+    height: calc(80vh - 40px);
+    width: calc(80vw - 40px);
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .scroller {
+    width: 100%;
+    border-radius: 13px;
+  }
+  
+  .scroller__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    transition: all 1.5s ease
+  }
+
+  .scroller__inner img {
+    width: 10%;
+    height: 600px;
+}
+  
+  .scroller[data-animated="true"] {
+    overflow: hidden;}
+  
+  .scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s)
+      var(--_animation-direction, forwards) linear infinite;
+  }
+  
+  .scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+  
+  .scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+  
+  .scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+  }
+  
+  .scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+  
+  
+  body {
+    display: grid;
+    min-block-size: 100vh;
+    place-content: center;
+    font-family: system-ui;
+    font-size: 1.125rem;
+    background-color: var(--clr-primary-800);
+  }
+
+  
+  /* for testing purposed to ensure the animation lined up correctly */
+  .test {
+    background: red !important;
+  }
+
+  a {
+    display: none;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centering trick */
+    z-index: 999; /* Ensure it's on top */
+    transition: all 0.15s ease;
+    animation: fadeInAnimation 1s ease forwards;
+    background-color: black;
+    font-family: "outfit", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border: 1px solid black;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+a:hover{
+  background-color: white;
+  color: black;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}

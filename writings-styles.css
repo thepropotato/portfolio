@@ -1,0 +1,118 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    display: flex;
+    height: 50vh;
+    width: 80vw;
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+    margin-left: 10vw;
+    margin-bottom: 10vw;
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    font-family: "outfit";
+    font-size: large;
+    padding-right: 20px;
+}
+
+.desc{
+    overflow: auto;
+}
+
+.desc::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 6px;
+    background-color: black; /* Background color of the scrollbar track */
+}
+
+.desc::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.4); /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+    border: 3px solid transparent; /* Border around the scrollbar thumb */
+    transition: all 0.15s ease;
+}
+
+.desc::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Color of the scrollbar thumb on hover */
+}
+
+.quotes{
+    border-radius: 20px;
+    font-family: "anek telugu";
+    font-size: large;
+    overflow: auto;
+    flex: 1;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0% 5%;
+}
+
+.quotes .p {
+    transition: opacity 0.5s ease;
+}
+
+#sp{
+    font-family: "outfit";
+}
+
+.navigation{
+    display: flex;
+    margin: 1%;
+    justify-content: space-around;
+}
+
+button{
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    transition: all 0.13s ease;   
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.show{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    margin-top: 2%;
+    width: fit-content;
+    text-decoration: none;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+a:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}

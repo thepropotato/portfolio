@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="about-styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <!-- Fira code font -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Bungee Hairline font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
+
+    <!-- Outfit -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <button id="translate" py-click="about">Translate</button>
+    <div class="terminal">
+        <div id="output">
+            <span style="color: rgba(255, 255, 255, 0.75);">PS portfolio:\venupulagam ></span> sudo begin<br>
+            Welcome ! There are 5 types of valid commands here.<br>
+            1. To view my description            - <span style="color: rgba(255, 255, 255, 0.75);">sudo get desc</span><br>
+            2. To view my techstack              - <span style="color: rgba(255, 255, 255, 0.75);">sudo get tech</span><br>
+            3. To view my knowledge of languages - <span style="color: rgba(255, 255, 255, 0.75);">sudo get lang</span><br>
+            4. To view my generalist knowledge   - <span style="color: rgba(255, 255, 255, 0.75);">sudo get gene</span><br>
+            5. To get help (view valid commands) - <span style="color: rgba(255, 255, 255, 0.75);">sudo get help</span><br>
+            Executing any other command will throw an error. Happy exploring ❤
+        </div>
+        
+        <div class="input">
+            <div id="pre">PS portfolio:\venupulagam > </div>
+            <input id="input"></input>
+        </div>
+    </div>
+
+    <div class="extras">
+        <div class="hobbies">
+            <p class="b3h">Hobbies and Interests</p>
+            <div class="tiles">
+                <p id="p1">Programming</p>
+                <p id="p2">Film-Making</p>
+                <p id="p3">Editing</p>
+                <p id="p4">Poster design</p>
+                <p id="p5">Listening to music</p>
+                <p id="p6">Watching films</p>
+                <p id="p7">Writing scripts</p>
+            </div>
+        </div>
+        
+        <button class="download" onclick="openPDF()">RESUME</button>
+        
+        <div class="additionals">
+            <p class="b3h">Additional Engagements</p>
+            <div class="grid">
+                <div id="g1">
+                    Directed a Short film (Dustbin)
+                    <a href="https://www.youtube.com/watch?v=XFRafnrzL9c&t=762s" target="_blank"><i class="material-icons" >open_in_new</i></a>
+                </div>
+
+                <div id="g2">
+                    Directed a Short film (Chivaraku Migiledhi)
+                    <a href="https://www.youtube.com/watch?v=XFRafnrzL9c&t=762s" target="_blank"><i class="material-icons" >open_in_new</i></a>
+                </div>
+
+                <div id="g3">
+                    Led the Gokulashtami Banner team (2023, 2024)
+                    <a href="https://www.youtube.com/watch?v=XFRafnrzL9c&t=762s" target="_blank"><i class="material-icons" >open_in_new</i></a>
+                </div>
+                
+                <div id="g4">
+                    Instructor, ML Bootcamp 2024
+                    <a href="https://www.linkedin.com/posts/venu-pulagam-a17042289_amritabootcamp-mlbootcamp-amritavishwavidyapeetham-activity-7170834529664917504-4qZK?utm_source=share&utm_medium=member_desktop" target="_blank"><i class="material-icons" >open_in_new</i></a>
+                </div>
+            </div>
+                    
+        </div>
+    </div>
+
+    <!----------------------- JAVASCRIPT --------------------->
+
+    <script type="text/javascript">
+
+        function openPDF() {
+            // Change 'resume.pdf' to the path of your PDF file
+            window.open('Resume.pdf', '_blank');
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var inputField = document.getElementById("input");
+            var translateButton = document.getElementById("translate");
+
+            inputField.addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    translateButton.click();
+                    setTimeout(function() {
+                        inputField.value = "";
+                    }, 10); 
+                }
+            });
+        });
+
+        // Get the element with id 'output'
+        var outputDiv = document.getElementById('output');
+
+        // Function to scroll to the bottom of the element
+        function scrollToBottom() {
+            outputDiv.scrollTop = outputDiv.scrollHeight;
+        }
+
+        // Call scrollToBottom function when the element is expanded
+        outputDiv.addEventListener('DOMSubtreeModified', scrollToBottom);
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var inputField = document.getElementById("input");
+            
+            inputField.addEventListener("input", function () {
+                var inputValue = inputField.value.toLowerCase(); // Convert input value to lowercase
+                
+                if (inputValue.includes("sudo")) {
+                    inputField.style.color = "rgb(160, 160, 160)"; // Change text color to green if "sudo" is entered
+                } else {
+                    inputField.style.color = ""; // Reset text color if "sudo" is not entered
+                }
+            });
+        });
+
+    </script>
+
+    <script type="py" src="about.py"></script>
+</body>

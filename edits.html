@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="edits-styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Outfit -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="scroller" data-direction="right" data-speed="fast">
+            <div class="scroller__inner">
+                <img src="images/wallpapers/1.jpg" alt="" />
+                <img src="images/wallpapers/2.jpg" alt="" />
+                <img src="images/wallpapers/3.jpg" alt="" />
+                <img src="images/wallpapers/4.jpg" alt="" />
+                <img src="images/wallpapers/5.jpg" alt="" />
+                <img src="images/wallpapers/6.jpg" alt="" />
+                <img src="images/wallpapers/7.jpg" alt="" />
+                <img src="images/wallpapers/8.jpg" alt="" />
+                <img src="images/wallpapers/9.jpg" alt="" />
+                <img src="images/wallpapers/10.jpg" alt="" />
+                <img src="images/wallpapers/11.jpg" alt="" />
+                <img src="images/wallpapers/12.jpg" alt="" />
+            </div>
+        </div>
+
+        <a href="https://drive.google.com/drive/folders/1EJOLDRTsmHPGpTpVIYhWc3lnXOb2h01J?usp=sharing" target="_blank">Show 'em all &nbsp<i class="material-icons">north_east</i></a>
+    </div>
+
+    <script>
+        const scrollers = document.querySelectorAll(".scroller");
+
+        // If a user hasn't opted in for reduced motion, then we add the animation
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            addAnimation();
+        }
+
+        function addAnimation() {
+            scrollers.forEach((scroller) => {
+                // add data-animated="true" to every `.scroller` on the page
+                scroller.setAttribute("data-animated", true);
+
+                // Make an array from the elements within `.scroller-inner`
+                const scrollerInner = scroller.querySelector(".scroller__inner");
+                const scrollerContent = Array.from(scrollerInner.children);
+
+                // For each item in the array, clone it
+                // add aria-hidden to it
+                // add it into the `.scroller-inner`
+                scrollerContent.forEach((item) => {
+                    const duplicatedItem = item.cloneNode(true);
+                    duplicatedItem.setAttribute("aria-hidden", true);
+                    scrollerInner.appendChild(duplicatedItem);
+                });
+            });
+        }
+
+        // Delay showing the link after 3 seconds on interaction (e.g., hover)
+        document.body.addEventListener('mouseover', function() {
+            setTimeout(function() {
+                document.querySelector("a").style.display = "flex";
+                const scrollerInner = document.querySelector(".scroller__inner");
+                scrollerInner.style.filter = "blur(20px)";
+            }, 3000);
+        }, { once: true }); // Ensure the event listener only triggers once
+    </script>
+</body>
