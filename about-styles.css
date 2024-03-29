@@ -349,6 +349,11 @@ p{
         border-bottom-right-radius: 15px;
     }
 
+    #p1, #p2, #p3, #p4, #p5, #p6, #p7{
+        width: fit-content;
+        padding: 0px 15px;
+    }
+
 }
 
 
