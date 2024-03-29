@@ -187,9 +187,14 @@ footer {
         width: 100%;
     }
 
+    i{
+        font-size: 40px;
+    }
+
     button, input, textarea{
         margin-left: 0%;
         margin: 2%;
+        border-radius: 10px;
     }
 
     #msg{
