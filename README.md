@@ -101,6 +101,7 @@ The choice of fonts throughout the website is the toughest part, when asked. I s
     - <a href="https://fonts.google.com/specimen/Dela+Gothic+One">Dela Gothic One</a>
     - <a href="https://www.dafont.com/inversionz.font">Inversionz</a>
     - <a href="https://www.dafont.com/dimitri.font">Dimitri</a>
+    - <a href="https://fonts.google.com/specimen/Bungee+Hairline">Bungee Hairline</a>
 
 - Icons used are from:
     - <a href="https://fonts.google.com/icons">Google icons</a>
