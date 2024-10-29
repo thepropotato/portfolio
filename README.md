@@ -113,7 +113,7 @@ The choice of fonts throughout the website is the toughest part, when asked. I s
 
 As aforementioned, the website is made responsive. So for the displays in portrait mode, I wanted to suggest users to view the site in landscape mode. So when opened in a portrait mode display, the landing page will not be displayed on load. Instead you will see this.
 
-<img src=https://github.com/thepropotato/portfolio/blob/main/readme-images/image-7.png style="height:500px"></img>
+![alt text](https://github.com/thepropotato/portfolio/blob/main/readme-images/image-7.png)
 
 Clicking on **No thanks** will take you to the home page of the website.
 The rest has almost no changes unless the casette won't be displayed in portrait mode. <br><br>
