@@ -9,7 +9,7 @@ Courtesy : The message functionality used in the "Contact" page is taken from <a
 
 # Landing (Home) page
 
-![alt text](readme-images/image.png)
+![alt text](https://github.com/thepropotato/portfolio/blob/main/readme-images/image.png)
 
 The landing page has 3 different options for navigation.
 
@@ -25,7 +25,7 @@ The landing page has 3 different options for navigation.
 
 # About page
 
-![alt text](readme-images/image-1.png)
+![alt text](https://github.com/thepropotato/portfolio/blob/main/readme-images/image-1.png)
 
 The **About** section is designed to be interactive.
 
@@ -42,7 +42,7 @@ The **About** section is designed to be interactive.
 
 # Projects page
 
-![alt text](readme-images/image-2.png)
+![alt text](https://github.com/thepropotato/portfolio/blob/main/readme-images/image-2.png)
 
 This **About** section of the website is simple and straight forward. The ***casette*** *(rotating element on the left)* is used as a decorative item. The choice of this stylings is discussed in the [Design choices](#design-choices) section of this file. 
 
@@ -50,27 +50,27 @@ The tab on the right displays the most recent projects I worked on. To view all 
 
 # Writings page
 
-![alt text](readme-images/image-3.png)
+![alt text](https://github.com/thepropotato/portfolio/blob/main/readme-images/image-3.png)
 
-With the immense love towards writing and film-making, I spend my free time writing short stories and scripts. I have uploaded all of them on <a href=https:/mdeium/@mosagadu>Medium.</a> (All stories are written in my mother tongue - Telugu)
+With the immense love towards writing and film-making, I spend my free time writing short stories and scripts. I have uploaded all of them on <a href=https:/medium/@mosagadu>Medium.</a> (All stories are written in my mother tongue - Telugu)
 
 The display box on the right features some hook lines from my writings. <br><br>
 
 # Edits page
 
-![alt text](readme-images/image-4.png)
+![alt text](https://github.com/thepropotato/portfolio/blob/main/readme-images/image-4.png)
 
 This section features some of my photo edits, most of them are designed for mobile screens (1080x2400)
 
 Since these are only a few, **While you enjoy the scrolling, after 3 seconds of your cursor/hand touching this section of the page, you will see something like this.**
 
-![alt text](readme-images/image-5.png)
+![alt text](https://github.com/thepropotato/portfolio/blob/main/readme-images/image-5.png)
 
 Clicking on the "**Show 'em all**" button will take you to the Google drive folder containing all the edits. <br><br>
 
 # Contact page
 
-![alt text](readme-images/image-6.png)
+![alt text](https://github.com/thepropotato/portfolio/blob/main/readme-images/image-6.png)
 
 The contact page features different ways to connect with me.
 
@@ -113,7 +113,7 @@ The choice of fonts throughout the website is the toughest part, when asked. I s
 
 As aforementioned, the website is made responsive. So for the displays in portrait mode, I wanted to suggest users to view the site in landscape mode. So when opened in a portrait mode display, the landing page will not be displayed on load. Instead you will see this.
 
-<img src=readme-images/image-7.png style="height:500px"></img>
+<img src=https://github.com/thepropotato/portfolio/blob/main/readme-images/image-7.png style="height:500px"></img>
 
 Clicking on **No thanks** will take you to the home page of the website.
 The rest has almost no changes unless the casette won't be displayed in portrait mode. <br><br>
